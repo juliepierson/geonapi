@@ -482,6 +482,7 @@ GNManager <- R6Class("GNManager",
         xml <- GNUtils$parseResponseXML(req, "UTF-8")
         if(output == "id"){
           idXML <- getNodeSet(xml, "//geonet:info/id", c(geonet = "http://www.fao.org/geonetwork"))
+          sprintf("tralala")
           if(length(idXML)>0){
             out <- as.integer(xmlValue(idXML[[1]]))
           }else{
